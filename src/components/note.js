@@ -1,5 +1,11 @@
+import "./note.css";
+
 const Note = () => {
-  return <p>Note</p>;
+  return (
+    <div className="note">
+      <p>Note names</p>
+    </div>
+  );
 };
 
 export default Note;

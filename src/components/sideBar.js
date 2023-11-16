@@ -1,8 +1,14 @@
+import "./sideBar.css";
+
+import Note from "./note";
+
 const SideBar = () => {
   return (
     <div className="noteList">
       <p>Pocket Notes</p>
-      <button>+Create Notes Group</button>
+      <button>
+        <span>+</span> Create Notes Group
+      </button>
       <Note />
     </div>
   );

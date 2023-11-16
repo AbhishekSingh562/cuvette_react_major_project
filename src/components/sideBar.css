@@ -1,0 +1,23 @@
+.noteList {
+  background: white;
+  font-weight: bold;
+  margin: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  padding: 20px;
+  position: fixed;
+}
+
+button {
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+button span {
+  font-weight: bolder;
+}

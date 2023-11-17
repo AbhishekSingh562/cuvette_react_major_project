@@ -10,6 +10,7 @@ const SideBar = () => {
         <span>+</span> Create Notes Group
       </button>
       <Note />
+      <Note />
     </div>
   );
 };

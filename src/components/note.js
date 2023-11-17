@@ -3,7 +3,8 @@ import "./note.css";
 const Note = () => {
   return (
     <div className="note">
-      <p>Note names</p>
+      <div className="circle">NN </div>
+      <div className="notes-name">Note names</div>
     </div>
   );
 };

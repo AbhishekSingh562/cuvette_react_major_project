@@ -4,13 +4,18 @@
   left: 0;
   bottom: 0;
   top: 0;
-  padding: 40px;
+  padding: 0rem 4rem 2rem 1.5rem;
   position: fixed;
 }
 .heading {
   font-size: 25px;
   font-weight: bold;
-  padding-bottom: 20px;
+  padding-bottom: 1rem;
+}
+
+button span {
+  font-size: 15px;
+  font-weight: bolder;
 }
 
 button {

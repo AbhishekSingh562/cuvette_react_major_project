@@ -6,8 +6,12 @@ function App() {
   return (
     <div>
       <SideBar />
-      <div className="bgImage">
+      <div className="bg">
         <img src={bgImg} />
+        <p>
+          Hey its Abishek singh this side, welcome to my this react application
+          which provides you to take your notes.
+        </p>
       </div>
     </div>
   );

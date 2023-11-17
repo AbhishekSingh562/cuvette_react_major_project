@@ -3,6 +3,11 @@ import "./popUp.css";
 
 const Popup = ({ isOpen, onClose, onSubmit }) => {
   const [newNoteName, setNewNoteName] = useState("");
+  const [selectedColor, setSelectedColor] = useState("#3498db");
+
+  const handleColorChange = (color) => {
+    setSelectedColor(color);
+  };
 
   const handleInputChange = (event) => {
     setNewNoteName(event.target.value);
@@ -10,9 +15,11 @@ const Popup = ({ isOpen, onClose, onSubmit }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit(newNoteName);
+    onSubmit({ name: newNoteName, color: selectedColor });
     setNewNoteName("");
   };
+
+  const colorOptions = ["#3498db", "#e74c3c", "#2ecc71", "#f39c12", "#9b59b6"];
 
   return (
     <>
@@ -23,16 +30,33 @@ const Popup = ({ isOpen, onClose, onSubmit }) => {
               {" "}
               &times;
             </span>
+
+            <h2>Create New Notes Group</h2>
+
             <form onSubmit={handleSubmit}>
               <label>
-                New Note Name:
+                Group Name
                 <input
                   type="text"
                   value={newNoteName}
                   onChange={handleInputChange}
                 />
               </label>
-              <button type="submit">Submit</button>
+
+              <div className="color-options">
+                Choose Color:
+                {colorOptions.map((color, index) => (
+                  <div
+                    key={index}
+                    className="color-option"
+                    style={{ backgroundColor: color }}
+                    onClick={() => handleColorChange(color)}
+                  />
+                ))}
+              </div>
+              <button type="submit" className="submit-button">
+                Submit
+              </button>
             </form>
           </div>
         </div>

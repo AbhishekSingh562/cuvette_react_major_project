@@ -5,7 +5,7 @@ import Popup from "./popUp";
 
 const SideBar = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
-  const [notes, setNotes] = useState(["Note1", "Note2"]);
+  const [notes, setNotes] = useState([]);
 
   const openPopup = () => {
     setPopupOpen(true);
@@ -15,9 +15,11 @@ const SideBar = () => {
     setPopupOpen(false);
   };
 
-  const handlePopupSubmit = (newNoteName) => {
-    if (newNoteName.trim() !== "") {
-      setNotes([...notes, newNoteName]);
+  const handlePopupSubmit = (newNote) => {
+    const { name, color } = newNote;
+
+    if (typeof name === "string" && name.trim() !== "") {
+      setNotes([...notes, { name, color }]);
       closePopup();
     }
   };
@@ -35,7 +37,7 @@ const SideBar = () => {
       />
 
       {notes.map((note, index) => (
-        <Note key={index} name={note} />
+        <Note key={index} name={note.name} />
       ))}
     </div>
   );

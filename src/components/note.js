@@ -1,7 +1,7 @@
 import React from "react";
 import "./note.css";
 
-const Note = ({ name }) => {
+const Note = ({ name, color }) => {
   const initials = () => {
     const words = name.split(" ");
 
@@ -14,7 +14,9 @@ const Note = ({ name }) => {
   };
   return (
     <div className="note">
-      <div className="circle">{initials()}</div>
+      <div className="circle" style={{ background: color }}>
+        {initials()}
+      </div>
       <div className="notes-name">{name}</div>
     </div>
   );

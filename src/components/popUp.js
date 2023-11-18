@@ -24,41 +24,43 @@ const Popup = ({ isOpen, onClose, onSubmit }) => {
   return (
     <>
       {isOpen && (
-        <div className="popup">
-          <div className="popup-content">
-            <span className="close" onClick={onClose}>
-              {" "}
-              &times;
-            </span>
+        <div className="popup-overlay">
+          <div className="popup">
+            <div className="popup-content">
+              <span className="close" onClick={onClose}>
+                {" "}
+                &times;
+              </span>
 
-            <h2>Create New Notes Group</h2>
+              <h2>Create New Notes Group</h2>
 
-            <form onSubmit={handleSubmit}>
-              <div className="input-box">
-                Group Name :
-                <input
-                  type="text"
-                  value={newNoteName}
-                  onChange={handleInputChange}
-                  placeholder="Enter your group name ..."
-                />
-              </div>
-
-              <div className="color-options">
-                Choose Color :
-                {colorOptions.map((color, index) => (
-                  <div
-                    key={index}
-                    className="color-option"
-                    style={{ backgroundColor: color }}
-                    onClick={() => handleColorChange(color)}
+              <form onSubmit={handleSubmit}>
+                <div className="input-box">
+                  Group Name :
+                  <input
+                    type="text"
+                    value={newNoteName}
+                    onChange={handleInputChange}
+                    placeholder="Enter your group name ..."
                   />
-                ))}
-              </div>
-              <button type="submit" className="submit-button">
-                Create
-              </button>
-            </form>
+                </div>
+
+                <div className="color-options">
+                  Choose Color :
+                  {colorOptions.map((color, index) => (
+                    <div
+                      key={index}
+                      className="color-option"
+                      style={{ backgroundColor: color }}
+                      onClick={() => handleColorChange(color)}
+                    />
+                  ))}
+                </div>
+                <button type="submit" className="submit-button">
+                  Create
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       )}

@@ -37,7 +37,12 @@ const SideBar = () => {
       />
 
       {notes.map((note, index) => (
-        <NoteName key={index} name={note.name} color={note.color} />
+        <NoteName
+          key={index}
+          name={note.name}
+          color={note.color}
+          setNotes={setNotes}
+        />
       ))}
     </div>
   );

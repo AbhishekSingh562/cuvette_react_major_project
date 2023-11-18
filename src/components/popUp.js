@@ -34,17 +34,18 @@ const Popup = ({ isOpen, onClose, onSubmit }) => {
             <h2>Create New Notes Group</h2>
 
             <form onSubmit={handleSubmit}>
-              <label>
-                Group Name
+              <div className="input-box">
+                Group Name :
                 <input
                   type="text"
                   value={newNoteName}
                   onChange={handleInputChange}
+                  placeholder="Enter your group name ..."
                 />
-              </label>
+              </div>
 
               <div className="color-options">
-                Choose Color:
+                Choose Color :
                 {colorOptions.map((color, index) => (
                   <div
                     key={index}
@@ -55,7 +56,7 @@ const Popup = ({ isOpen, onClose, onSubmit }) => {
                 ))}
               </div>
               <button type="submit" className="submit-button">
-                Submit
+                Create
               </button>
             </form>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./sideBar.css";
-import Note from "./note";
+import NoteName from "./noteName";
 import Popup from "./popUp";
 
 const SideBar = () => {
@@ -37,7 +37,7 @@ const SideBar = () => {
       />
 
       {notes.map((note, index) => (
-        <Note key={index} name={note.name} color={note.color} />
+        <NoteName key={index} name={note.name} color={note.color} />
       ))}
     </div>
   );

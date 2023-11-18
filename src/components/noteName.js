@@ -1,7 +1,7 @@
-import React from "react";
-import "./note.css";
+import React, { useState } from "react";
+import "./noteName.css";
 
-const Note = ({ name, color }) => {
+const NoteName = ({ name, color, onEdit }) => {
   const initials = () => {
     const words = name.split(" ");
 
@@ -12,14 +12,17 @@ const Note = ({ name, color }) => {
     }
     return "";
   };
+
   return (
-    <div className="note">
+    <div className="note" style={{ cursor: "pointer" }}>
       <div className="circle" style={{ background: color }}>
         {initials()}
       </div>
-      <div className="notes-name">{name}</div>
+      <div className="notes-name" onClick={onEdit}>
+        {name}
+      </div>
     </div>
   );
 };
 
-export default Note;
+export default NoteName;

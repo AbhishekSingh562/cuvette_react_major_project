@@ -14,59 +14,62 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid #ccc;
   z-index: 2;
 }
 
 .popup-content {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   padding: 20px;
 }
 h2 {
-  margin-bottom: 20px;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
 }
 
-label {
+/* label {
   display: block;
   margin-bottom: 10px;
-}
+} */
 
 input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 15px;
+  width: 64%;
+  padding: 0.65rem;
+  /* box-sizing: border-box; */
+  border: 1px solid rgb(49, 49, 49);
+  border-radius: 5rem;
+  margin-bottom: 2rem;
 }
 
 .color-options {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
+  margin-left: 0rem;
 }
 .color-option {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
   cursor: pointer;
 }
 .submit-button {
   align-self: flex-end;
-  background-color: #3498db; /* Default color */
+  background-color: rgb(89, 89, 89); /* Default color */
   color: white;
-  padding: 10px 15px;
+  padding: 0.5rem 1.3rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .submit-button:hover {
-  background-color: #2980b9; /* Hover color */
+  background-color: black; /* Hover color */
 }
 .close {
   position: absolute;
@@ -75,6 +78,8 @@ input {
   cursor: pointer;
 }
 
-button {
-  margin-top: 10px;
+.submit-button {
+  margin-left: 18rem;
+  margin-right: 0rem;
+  margin-top: 1rem;
 }
